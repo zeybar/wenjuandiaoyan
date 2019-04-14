@@ -1,13 +1,78 @@
+$inputBorderColor: #ababab;
+$formItemColor: #666;
+$formButtonColor: #505050;
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 
 body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+  font: 14px/1.5 'PingFang SC', 'Hiragino Sans GB', 'Microsoft Yahei', sans-serif, 'Avenir', Helvetica, Arial, sans-serif;
+  color: #4a4a4a;
+  background: #f7f7f7;
+}
+
+::-webkit-input-placeholder{
+  color:#9b9b9b;
+}
+.el-input__inner {
+  border-color: #bec3cd;
+}
+
+.el-select .el-input.is-focus .el-input__inner,
+.el-select .el-input__inner:focus,
+.el-input__inner:focus {
+  outline: none;
+  border-color: $inputBorderColor;
+}
+
+.el-select-dropdown__item.selected {
+  color: $formButtonColor;
+  font-weight: 700;
+}
+.el-button:focus,
+.el-button:hover {
+  color: $formButtonColor;
+  border-color: #cbcbcb;
+  background: #eee;
+}
+.el-button--primary:focus,
+.el-button--primary:hover,
+.el-button--primary {
+  color: #fff;
+  border-color: $formButtonColor;
+  background: $formButtonColor;
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-radio__input.is-checked .el-radio__inner {
+  color: $formItemColor;
+  border-color: $formItemColor;
+  background: $formItemColor;
+}
+
+.el-checkbox__input.is-focus .el-checkbox__inner {
+  border-color: $formItemColor;
+}
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background: $formItemColor;
+  border-color: $formItemColor;
+}
+.el-checkbox__input.is-checked+.el-checkbox__label {
+  color: $formItemColor;
+}
+
+.el-radio__input.is-checked+.el-radio__label {
+  color: $formButtonColor;
+}
+
+.mobile-msg {
+  min-width: 60%;
 }

@@ -5,11 +5,6 @@ export default [
     path: '/',
     name: 'home',
     component: Home,
-    meta: {
-      login: false,
-      showHeader: true,
-      showVersionTip: true,
-    },
   },
   // 404 路由永远在最后
   // {
